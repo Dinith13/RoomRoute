@@ -24,7 +24,7 @@ const ExclusiveOffers = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 w-full">
         {exclusiveOffers.map((item) => (
           <div
-            key={item.id}
+            key={item._id || item.id} // Use _id if available, else id
             className="group relative flex flex-col justify-between gap-4 pt-12 px-4 rounded-xl text-white bg-no-repeat bg-cover bg-center min-h-[300px]"
             style={{ backgroundImage: `url(${item.image})` }}
           >
